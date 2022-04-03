@@ -1,50 +1,45 @@
-import React from 'react';
-import SmallCard from './SmallCard';
+import React from 'react'
+import SmallCard from './SmallCard'
 
 /*  Cada set de datos es un objeto literal */
 
 /* <!-- Movies in DB --> */
 
 let moviesInDB = {
-    title: 'Total de productos',
-    color: 'primary', 
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
+  title: 'Total de productos',
+  color: 'primary',
+  cuantity: 21,
+  icon: 'fa-clipboard-list',
 }
 
 /* <!-- Total awards --> */
 
 let totalAwards = {
-    title:' Total de usuarios', 
-    color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
+  title: ' Total de usuarios',
+  color: 'success',
+  cuantity: '79',
+  icon: 'fa-award',
 }
 
 /* <!-- Actors quantity --> */
 
 let actorsQuantity = {
-    title:'Total de categorías' ,
-    color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
+  title: 'Total de categorías',
+  color: 'warning',
+  cuantity: '49',
+  icon: 'fa-user-check',
 }
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+let cartProps = [moviesInDB, totalAwards, actorsQuantity]
 
-function ContentRowMovies(){
-    return (
-    
-        <div className="row">
-            
-            {cartProps.map( (movie, i) => {
-
-                return <SmallCard {...movie} key={i}/>
-            
-            })}
-
-        </div>
-    )
+function ContentRowMovies() {
+  return (
+    <div className="row">
+      {cartProps.map((movie, i) => {
+        return <SmallCard {...movie} key={i} />
+      })}
+    </div>
+  )
 }
 
-export default ContentRowMovies;
+export default ContentRowMovies
