@@ -1,4 +1,4 @@
-let APIUrl = 'http://localhost:3000/api/listarUsuario'
+let APIUrl = 'http://localhost:3000/api/listarProducto'
 
 export default fetch(APIUrl, {
   method: 'GET',
@@ -10,4 +10,4 @@ export default fetch(APIUrl, {
   cache: 'default',
 })
   .then((res) => res.json())
-  .then((users) => console.log(users))
+  .then((products) => console.log(products))
