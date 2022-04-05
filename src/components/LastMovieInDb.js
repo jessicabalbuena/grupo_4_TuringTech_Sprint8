@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react'
 import imagenFondo from '../assets/images/mandalorian.jpg'
 
-function LastMovieInDb({products}) {
+function LastMovieInDb({productsData}) {
+  console.log(productsData);
 
   return (
     <div className="col-lg-6 mb-4">

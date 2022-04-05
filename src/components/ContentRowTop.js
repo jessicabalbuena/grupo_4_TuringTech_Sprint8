@@ -3,7 +3,7 @@ import ContentRowCenter from './ContentRowCenter'
 import ContentRowMovies from './ContentRowMovies'
 import Chart from './Chart'
 
-function ContentRowTop({ users, products, productsCategory }) {
+function ContentRowTop({ users, products, productsCategory, productsData }) {
   return (
     <React.Fragment>
       {/*<!-- Content Row Top -->*/}
@@ -18,10 +18,8 @@ function ContentRowTop({ users, products, productsCategory }) {
           products={products}
           productsCategory={productsCategory}
         />
-        <ContentRowCenter
-          products={products}
-        />
-        <Chart />
+        <ContentRowCenter productsData={productsData} />
+        <Chart productsData={productsData} />
       </div>
       {/*<!--End Content Row Top-->*/}
     </React.Fragment>

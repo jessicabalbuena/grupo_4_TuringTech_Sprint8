@@ -57,6 +57,7 @@ function ContentWrapper() {
             users={users}
             products={products}
             productsCategory={productsCategory}
+            productsData={productsData}
           />
           <Footer />
         </div>
