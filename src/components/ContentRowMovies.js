@@ -32,19 +32,21 @@ let actorsQuantity = {
 
 let cartProps = [moviesInDB, totalAwards, actorsQuantity];
 
-function ContentRowMovies(){
-    return (
-    
-        <div className="row">
-            
-            {cartProps.map( (movie, i) => {
 
-                return <SmallCard {...movie} key={i}/>
-            
+    function ContentRowMovies() {
+        fetch('http://localhost:3000/api/listarUsuario')
+            .then((res) => res.json())
+            .then((users) => console.log(users))
+        return (
+            <div className="row">
+            {cartProps.map((movie, i) => {
+                return <SmallCard {...movie} key={i} />
+
             })}
+            </div>
+        )
+        }
+    
 
-        </div>
-    )
-}
 
 export default ContentRowMovies;
