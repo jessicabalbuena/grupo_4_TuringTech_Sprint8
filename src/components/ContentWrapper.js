@@ -5,7 +5,7 @@ import Footer from './Footer'
 function ContentWrapper() {
   const [users, setUsers] = useState()
   const [products, setProducts] = useState()
-  const [productsData, setProductsData] = useState()
+  const [productsData, setProductsData] = useState([])
   const [productsCategory, setProductsCategory] = useState()
 
   let APIUrlUser = 'http://localhost:3000/api/listarUsuario'
@@ -42,7 +42,8 @@ function ContentWrapper() {
         console.log(products)
         setProducts(products.totalProducts)
         setProductsCategory(products.countByCategorie.length)
-        setProductsData(products.products)
+        setProductsData([...products.products])
+        console.log(productsData);
       })
   }, [products])
 
@@ -57,6 +58,7 @@ function ContentWrapper() {
             users={users}
             products={products}
             productsCategory={productsCategory}
+            productsData={productsData}
           />
           <Footer />
         </div>
