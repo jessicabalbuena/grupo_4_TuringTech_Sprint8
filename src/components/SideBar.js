@@ -7,6 +7,7 @@ import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
+import Users from './Users';
 
 function SideBar(){
     return(
@@ -65,6 +66,13 @@ function SideBar(){
                         <span>Buscar un producto</span>
                     </Link>
                 </li>
+                
+                <li className="nav-item nav-link">
+                    <Link className="nav-link" to="/Usuarios">
+                        <i className="fas fa-search"></i>
+                        <span>Usuarios Totales</span>
+                    </Link>
+                </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
@@ -102,6 +110,9 @@ function SideBar(){
                 </Route>
                 <Route path="/SearchMovies">
                     <SearchMovies />
+                </Route>
+                <Route path="/Usuarios">
+                    <Users />
                 </Route>
                 <Route component={NotFound} />
             </Switch>

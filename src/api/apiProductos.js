@@ -10,4 +10,4 @@ export default fetch(APIUrl, {
   cache: 'default',
 })
   .then((res) => res.json())
-  .then((products) => console.log(products))
+  .then((products) => products)
