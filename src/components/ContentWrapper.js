@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import TopBar from './TopBar'
 import ContentRowTop from './ContentRowTop'
 import Footer from './Footer'
+
 function ContentWrapper() {
   const [users, setUsers] = useState()
   const [products, setProducts] = useState()
@@ -39,19 +40,17 @@ function ContentWrapper() {
     })
       .then((res) => res.json())
       .then((products) => {
-        console.log(products)
         setProducts(products.totalProducts)
         setProductsCategory(products.countByCategorie.length)
         setProductsData([...products.products])
         console.log(productsData);
+        console.log(products);
       })
   }, [products])
 
   return (
     <React.Fragment>
-      {/*<!-- Content Wrapper -->*/}
       <div id="content-wrapper" className="d-flex flex-column">
-        {/*<!-- Main Content -->*/}
         <div id="content">
           <TopBar />
           <ContentRowTop

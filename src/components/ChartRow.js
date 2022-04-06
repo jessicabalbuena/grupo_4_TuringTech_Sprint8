@@ -1,7 +1,6 @@
 import React from 'react'
 
 function ChartRow(props) {
-  console.log(props.product)
   const { Description, length, Price, Id } = props.product
   return (
     <tr>

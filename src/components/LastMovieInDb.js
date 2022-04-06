@@ -1,8 +1,7 @@
-import React, {useState,useEffect} from 'react'
-import imagenFondo from '../assets/images/mandalorian.jpg'
+import React/* , {useState,useEffect} */ from 'react'
 
 function LastMovieInDb({productsData}) {
-  console.log(productsData);
+  let lastProduct = productsData[productsData.length - 1]
 
   return (
     <div className="col-lg-6 mb-4">
@@ -17,17 +16,12 @@ function LastMovieInDb({productsData}) {
             <img
               className="img-fluid px-3 px-sm-4 mt-3 mb-4"
               style={{ width: 40 + 'rem' }}
-              src={imagenFondo}
-              alt=" Star Wars - Mandalorian "
+              src={productsData.length > 0 && lastProduct.Image}
+              alt="Último producto imágen"
             />
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-            consequatur explicabo officia inventore libero veritatis iure
-            voluptate reiciendis a magnam, vitae, aperiam voluptatum non
-            corporis quae dolorem culpa citationem ratione aperiam voluptatum
-            non corporis ratione aperiam voluptatum quae dolorem culpa ratione
-            aperiam voluptatum?
+            {productsData.length > 0 && lastProduct.Description}
           </p>
           <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">
             Ver detalle de producto
