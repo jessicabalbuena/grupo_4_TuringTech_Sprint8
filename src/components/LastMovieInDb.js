@@ -23,9 +23,6 @@ function LastMovieInDb({productsData}) {
           <p>
             {productsData.length > 0 && lastProduct.Description}
           </p>
-          <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">
-            Ver detalle de producto
-          </a>
         </div>
       </div>
     </div>
