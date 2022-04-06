@@ -2,7 +2,6 @@ import React from 'react'
 import ChartRow from './ChartRow'
 
 function Chart({ productsData }) {
-  console.log(productsData)
   return (
     /* <!-- DataTales Example --> */
     <div className="card shadow mb-4">
