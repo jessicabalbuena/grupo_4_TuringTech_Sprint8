@@ -32,7 +32,7 @@ function SearchMovies() {
     setKeyword(inputValue)
     inputTag.current.value = ''
     let filtered = products.filter((productsFiltered) =>
-      productsFiltered.Description.includes(inputValue),
+      productsFiltered.Descriptionplus.includes(inputValue) ,
     )
     setFilter(filtered)
   }
@@ -44,7 +44,7 @@ function SearchMovies() {
           <div className="col-12 col-md-6">
             <form method="GET" onSubmit={searchProduct}>
               <div className="form-group">
-                <label htmlFor="">Buscar por nombre:</label>
+                <label htmlFor="">Buscar por descripcion:</label>
                 <input ref={inputTag} type="text" className="form-control" />
               </div>
               <button className="btn btn-info">Buscar</button>
@@ -69,7 +69,7 @@ function SearchMovies() {
                         <div className="text-center">
                           <img
                             className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-                            src={noPoster}
+                            src={productFiltered.Image}
                             alt={productFiltered.Description}
                             style={{
                               width: '90%',
@@ -78,7 +78,10 @@ function SearchMovies() {
                             }}
                           />
                         </div>
-                        <p>{productFiltered.Id}</p>
+                        <p>{productFiltered.name}</p>
+                        <p>{productFiltered.Description}</p>
+                        <p>{productFiltered.Descriptionplus}</p>
+                        <p>{productFiltered.precio}</p>
                       </div>
                     </div>
                   </div>
@@ -98,7 +101,7 @@ function SearchMovies() {
                         <div className="text-center">
                           <img
                             className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-                            src={noPoster}
+                            src={product.Image}
                             alt={product.Description}
                             style={{
                               width: '90%',
@@ -107,7 +110,9 @@ function SearchMovies() {
                             }}
                           />
                         </div>
-                        <p>Id: {product.Id}</p>
+                        <p>Nombre: {product.name}</p>
+					            	<p>Descripcion:{product.Description}</p>
+						            <p>{product.Descriptionplus}</p>
                       </div>
                     </div>
                   </div>

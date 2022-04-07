@@ -21,8 +21,18 @@ function LastMovieInDb({productsData}) {
             />
           </div>
           <p>
+            {productsData.length > 0 && lastProduct.name}
+          </p>
+          <p>
             {productsData.length > 0 && lastProduct.Description}
           </p>
+          <p>
+            {productsData.length > 0 && lastProduct.Descriptionplus}
+          </p>
+          <p>
+           EL precio es de {productsData.length > 0 && lastProduct.Price}$
+          </p>
+
         </div>
       </div>
     </div>
