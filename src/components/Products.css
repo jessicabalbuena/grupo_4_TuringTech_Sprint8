@@ -1,12 +1,14 @@
-
-.users__principal{
+.product__total{
+    
     background-color: #0e0b16be;
     width: 100vw;
     
-    
 }
 
-.users__h2 {
+.users__total-ul{
+    border: 2px solid black;
+}
+.product__h2{
     display: inline-block;
     position: absolute;
     text-align: center;
@@ -16,14 +18,9 @@
     padding: 20px;
     color: #E7DFDD;
     
+
 }
 
-.users__nombres{
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #E7DFDD;
-}
 
 td, th {
     border: 2px solid black;
@@ -33,6 +30,12 @@ td, th {
 th{
     color: #f6221783;
 }
+.users__nombres{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #E7DFDD;
+}
 
 .btn-bootstrap {
     padding: .375rem .75rem;
@@ -40,12 +43,12 @@ th{
     background-color: #f6221783;
     color: #fff;
     transition: background-color .15s ease-in-out;
-  }
-  
-  .btn-bootstrap:hover, .btn-bootstrap:focus {
+}
+
+.btn-bootstrap:hover, .btn-bootstrap:focus {
     background-color: #f6221773;
-  }
-  
-  .btn-bootstrap:active {
+}
+
+.btn-bootstrap:active {
     background-color: #e7f61221;
-  }
+}
