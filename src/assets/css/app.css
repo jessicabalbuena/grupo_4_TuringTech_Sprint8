@@ -551,7 +551,7 @@ pre code {
     padding-right: .75rem;
     padding-left: .75rem;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 .row {
@@ -6217,7 +6217,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .bg-white {
-    background-color: #fff !important
+    background-color: #0E0B16 !important
 }
 
 .bg-transparent {
@@ -9688,7 +9688,7 @@ a:focus {
 }
 
 #wrapper #content-wrapper {
-    background-color: #f8f9fc;
+    background-color: #0e0b16be;
     width: 100%;
     overflow-x: hidden
 }
@@ -9913,7 +9913,9 @@ a:focus {
 }
 
 .text-gray-800 {
-    color: #5a5c69 !important
+    color: #f6221783 !important;
+    font-weight: 700;
+     
 }
 
 .text-gray-900 {

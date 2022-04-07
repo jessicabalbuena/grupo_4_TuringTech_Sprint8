@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import TopBar from './TopBar'
 import ContentRowTop from './ContentRowTop'
 import Footer from './Footer'
+import '../index.css'
 
 function ContentWrapper() {
   const [users, setUsers] = useState()
@@ -50,7 +51,7 @@ function ContentWrapper() {
 
   return (
     <React.Fragment>
-      <div id="content-wrapper" className="d-flex flex-column">
+      <div id="content-wrapper" className="d-flex flex-column fondo">
         <div id="content">
           <TopBar />
           <ContentRowTop
